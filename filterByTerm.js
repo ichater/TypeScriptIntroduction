@@ -1,12 +1,9 @@
-"use strict";
-function filterByTerm(input, searchTerm) {
-    if (!searchTerm)
-        throw Error("searchTerm cannot be empty");
-    if (!input.length)
-        throw Error("inputArr cannot be empty");
-    var regex = new RegExp(searchTerm, "i");
-    return input.filter(function (arrayElement) {
-        return arrayElement.url.match(regex);
-    });
+var button = document.querySelector("button");
+var input1 = document.getElementById("num1");
+var input2 = document.getElementById("num2");
+function add(num1, num2) {
+    return num1 + num2;
 }
-filterByTerm([{ url: "string1" }, { url: "string2" }, { url: "string3" }], "java");
+button.addEventListener("click", function () {
+    console.log(add(+input1.value, +input2.value));
+});
