@@ -1,7 +1,6 @@
 {
-  "name": "Typescript-introduction",
+  "name": "typescript-introduction",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,5 +11,15 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichater/TypeScriptIntroduction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ichater/TypeScriptIntroduction/issues"
+  },
+  "homepage": "https://github.com/ichater/TypeScriptIntroduction#readme",
+  "description": ""
 }
