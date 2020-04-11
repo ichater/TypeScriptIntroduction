@@ -1,16 +1,25 @@
-function add(phrase: string, n1: number, n2: number, showResult: boolean) {
-  let result = n1 + n2;
-  if (showResult) {
-    console.log(phrase + result);
+function combine(
+  input1: number | string,
+  input2: number | string,
+  resultType: string
+) {
+  let result;
+  if (
+    (typeof input1 === "number" && typeof input2 === "number") ||
+    resultType === "as-number"
+  ) {
+    result = +input1 + +input2;
   } else {
-    return result;
+    result = input1.toString() + " " + input2.toString();
   }
+  //   if (resultType === "as-number") {
+  //     +result;
+  //   } else {
+  //     result.toString();
+  //   }
+  console.log(result);
 }
 
-const number1 = 5;
-const number2 = 15;
-const printResult = true;
-const resultPhrase = "result is: ";
+const comsinedAges = combine("90", "26", "as-number");
 
-const result = add(resultPhrase, number1, number2, printResult);
-console.log(result);
+const combineNames = combine("Dan", 32, "as-string");
