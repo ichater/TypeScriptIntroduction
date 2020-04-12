@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
+    // es6 will change generated code to let and const
     "strict": true
-  }
+  },
+  "exclude": ["basics.ts", "node_modules"]
 }

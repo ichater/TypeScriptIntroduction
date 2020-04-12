@@ -1,17 +1,12 @@
-function add(n1, n2) {
-    return n1 + n2;
+"use strict";
+var userInput;
+var userName;
+userInput = 5;
+userInput = "Max";
+if (typeof userInput === "string") {
+    userName = userInput;
 }
-function printResult1(num) {
-    console.log("result: " + num);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-function adddAndHanele(n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
-}
-printResult1(add(5, 12));
-var combineValues;
-combineValues = add;
-console.log(combineValues(8, 8));
-adddAndHanele(10, 20, function (result) {
-    console.log(result);
-});
+generateError("an error orrured", 500);
