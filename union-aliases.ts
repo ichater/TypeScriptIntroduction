@@ -1,7 +1,10 @@
+type Combinable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
 function combine(
-  input1: number | string,
-  input2: number | string,
-  resultType: string
+  input1: Combinable,
+  input2: Combinable,
+  resultType: ConversionDescriptor
 ) {
   let result;
   if (
@@ -20,6 +23,6 @@ function combine(
   console.log(result);
 }
 
-const comsinedAges = combine("90", "26", "as-number");
+const combinedAges = combine("90", "26", "as-number");
 
-const combineNames = combine("Dan", 32, "as-string");
+const combinedNames = combine("Dan", 32, "as-text");
